@@ -1,0 +1,8 @@
+<div *ngIf="dataLoaded; else noData">
+    <div *ngFor="let item of items">
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.description }}</p>
+    </div>
+</div>
+<ng-template #noData><p>No data loaded.</p></ng-template>
+<button (click)="loadData()">Load Data</button>
